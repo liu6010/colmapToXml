@@ -1,0 +1,49 @@
+[SaveXmlUndistort]
+cameras_path = "/home/lhw/Gradute/3dReconstruction/datasets/0628SeqRgbd/person/txt/cameras.txt"
+images_path = "/home/lhw/Gradute/3dReconstruction/datasets/0628SeqRgbd/person/txt/images.txt"
+color_path="/home/lhw/Gradute/3dReconstruction/datasets/0628SeqRgbd/person/color/"
+color_path_undistor="/home/lhw/Gradute/3dReconstruction/datasets/0628SeqRgbd/person/color_undistort/"
+mask_path_path="/home/lhw/Gradute/3dReconstruction/datasets/0628SeqRgbd/person/maskraw/"
+mask_path_undistor="/home/lhw/Gradute/3dReconstruction/datasets/0628SeqRgbd/person/mask_undistort/"
+points3D_path = ""
+output_path="/home/lhw/Gradute/3dReconstruction/datasets/0628SeqRgbd/person/xmlColmap/"
+img_type = "jpg"
+
+[Seq_Calib]
+cameras_path = "/home/lhw/Gradute/calibration/sequence_calib/datasets/0606/combinedCalib/input/0/cameras.txt"
+images_path = "/home/lhw/Gradute/calibration/sequence_calib/datasets/0606/combinedCalib/input/0/images.txt"
+sequence_points="/home/lhw/Gradute/calibration/sequence_calib/datasets/0606/combinedCalib/input/0/group10_points.xml"
+color_path="/home/lhw/Gradute/3dReconstruction/Filter/datasets/0512_clq/color/"
+color_path_undistor="/home/lhw/Gradute/3dReconstruction/Filter/datasets/0512_clq/color_undistort/"
+
+
+
+mask_path_path="/home/lhw/Gradute/3dReconstruction/Filter/datasets/0512_clq/seg_out/pha/"
+mask_path_undistor="/home/lhw/Gradute/3dReconstruction/Filter/datasets/0512_clq/mask_undistort/"
+
+points3D_path = ""
+output_path="/home/lhw/Gradute/3dReconstruction/Filter/datasets/0512_clq/xml/"
+img_type = "jpg"
+
+[UndistortStereo]
+cameras_path = "/home/lhw/Gradute/3dReconstruction/datasets/0530/0530Data/colmap/cameras.txt"
+images_path = "/home/lhw/Gradute/3dReconstruction/datasets/0530/0530Data/colmap/images.txt"
+left_image_path="/home/lhw/Gradute/3dReconstruction/datasets/0530/left/"
+leftoutput_image_path="/home/lhw/Gradute/3dReconstruction/datasets/0530/left_undistortColmap/"
+right_image_path="/home/lhw/Gradute/3dReconstruction/datasets/0530/right/"
+rightoutput_image_path="/home/lhw/Gradute/3dReconstruction/datasets/0530/right_undistortColmap/"
+points3D_path = ""
+stereoGroupNum=34
+output_path="/home/lhw/Gradute/3dReconstruction/datasets/0530/0530Data/xml/"
+img_type = "jpg"
+
+[SterreBaseline]
+cameras_path = "/home/lhw/Gradute/3dReconstruction/datasets/0527_stereo_sequence_UE4/sequence_calib/group_30/input/0/cameras.txt"
+images_path = "/home/lhw/Gradute/3dReconstruction/datasets/0527_stereo_sequence_UE4/sequence_calib/group_30/input/0/images.txt"
+leftXmlPath="/home/lhw/Gradute/3dReconstruction/datasets/0527_stereo_sequence_UE4/sequence_calib/0/left/para/"
+rightXmlPath="/home/lhw/Gradute/3dReconstruction/datasets/0527_stereo_sequence_UE4/sequence_calib/0/right/para/"
+points3D_path = ""
+output_path="/home/lhw/Gradute/3dReconstruction/datasets/0520_stereo_UE4/left_test/xml/"
+img_type = "jpg"
+stereoGroupNum = 18
+

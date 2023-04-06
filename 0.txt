@@ -1,0 +1,60 @@
+./calibRGBD \
+    --imgType jpg \
+    --imagesTxt /home/lhw/Gradute/3dReconstruction/datasets/0627CalibRGBD/txt/images.txt \
+    --camerasTxt /home/lhw/Gradute/3dReconstruction/datasets/0627CalibRGBD/txt/cameras.txt \
+    --points3dTxt /home/lhw/Gradute/3dReconstruction/datasets/0627CalibRGBD/txt/points3D.txt \
+    --rgbd /home/lhw/Gradute/3dReconstruction/datasets/0627CalibRGBD/depthUE4/%04d.png \
+    --params /home/lhw/Gradute/3dReconstruction/datasets/0627CalibRGBD/para/%04d.xml
+
+
+./undistortion \
+    --images /home/lhw/Gradute/3dReconstruction/datasets/0625UE4/images_Stereo/left_test/color/%04d.jpg \
+    --param /home/lhw/Gradute/3dReconstruction/datasets/0625UE4/images_Stereo/left_test/xml/%04d.xml \
+    --num 20 --bias 0 --step 1 \
+    --flag 0 \
+    --save /home/lhw/Gradute/3dReconstruction/datasets/0625UE4/images_Stereo/left_test/color_undistort/%04d.jpg
+
+./sequenceRgbd \
+    --imageNum 3 --bias 0 --step 1 \
+    --numGroup 9 \
+    --rootPath /home/lhw/Gradute/3dReconstruction/datasets/0628SeqRgbd/sequence_calib/input/0/ \
+    --groupPointsPath /home/lhw/Gradute/3dReconstruction/datasets/0628SeqRgbd/sequence_calib/input/group_points.xml \
+    --depthPath /home/lhw/Gradute/3dReconstruction/datasets/0628SeqRgbd/sequence_calib/%d/depthtiff/%04d.tiff \
+    --seqCaliFolder /home/lhw/Gradute/3dReconstruction/datasets/0628SeqRgbd/sequence_calib/ \
+    --outputPath /home/lhw/Gradute/3dReconstruction/datasets/0628SeqRgbd/person/resxml/ \
+    --imgType jpg
+
+# save all left and right cameras
+./SaveXmlUndistort \
+    --rootPath /home/fhy/Worksapce/lhw/calib/datasets/0709/person1_0/txt/ \
+    --imgType jpg \
+    --outputPath /home/fhy/Worksapce/lhw/calib/datasets/0709/person1_0/allxml/
+
+# only save all left cameras
+./SaveXmlUndistort \
+    --rootPath /home/fhy/Worksapce/lhw/calib/datasets/0709/person1_0/txt/ \
+    --imgType jpg \
+    --outputPath /home/fhy/Worksapce/lhw/calib/datasets/0709/person1_0/xml/ \
+    --onlySaveLeft
+
+# only undistort left cameras and color
+./SaveXmlUndistort \
+    --rootPath /home/fhy/Worksapce/lhw/calib/datasets/0709/person1_0/txt/ \
+    --imgType jpg \
+    --onlySaveLeft \
+    --unDistortFlag 0 \
+    --imagePath /home/fhy/Worksapce/lhw/calib/datasets/0709/person1_0/color/ \
+    --unDistOutPath  /home/fhy/Worksapce/lhw/calib/datasets/0709/person1_0/color_undistort
+
+
+# undistort save all images
+./SaveXmlUndistort \
+    --rootPath /home/lhw/Gradute/datasets/0924/ywg/txt/ \
+    --imagePath /home/lhw/Gradute/datasets/0924/ywg/color \
+    --unDistOutPath /home/lhw/Gradute/datasets/0924/ywg/color_undistort \
+    --imgType jpg \
+    --unDistortFlag 0
+
+
+
+
